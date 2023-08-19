@@ -8,29 +8,78 @@
   </head>
   <body>
     <p><a href="index.html">Go back</a></p>
+    <div class="timer-wrapper">
+      <div class="calendar">
+        <input type="text" id="datetime-picker" />
+        <button type="button" class="start-btn disabled" data-start disabled>
+          Start
+        </button>
+      </div>
 
-    <input type="text" id="datetime-picker" />
-    <button type="button" data-start>Start</button>
-
-    <div class="timer">
-      <div class="field">
-        <span class="value" data-days>00</span>
-        <span class="label">Days</span>
-      </div>
-      <div class="field">
-        <span class="value" data-hours>00</span>
-        <span class="label">Hours</span>
-      </div>
-      <div class="field">
-        <span class="value" data-minutes>00</span>
-        <span class="label">Minutes</span>
-      </div>
-      <div class="field">
-        <span class="value" data-seconds>00</span>
-        <span class="label">Seconds</span>
+      <div class="timer">
+        <div class="field">
+          <span class="value" data-days>00</span>
+          <span class="label">Days</span>
+        </div>
+        <div class="field">
+          <span class="value" data-hours>00</span>
+          <span class="label">Hours</span>
+        </div>
+        <div class="field">
+          <span class="value" data-minutes>00</span>
+          <span class="label">Minutes</span>
+        </div>
+        <div class="field">
+          <span class="value" data-seconds>00</span>
+          <span class="label">Seconds</span>
+        </div>
       </div>
     </div>
+    <style>
+      .timer-wrapper {
+        width: 300px;
+        margin: auto;
+      }
+      .calendar {
+        display: flex;
+        justify-content: space-between;
+      }
+      #datetime-picker {
+        box-sizing: border-box;
+        display: block;
+        padding: 0;
+        font-size: 28px;
+        width: 224px;
+      }
+      .start-btn {
+        font-size: 24px;
+        cursor: pointer;
+      }
+      .start-btn.disabled {
+        cursor: not-allowed;
+      }
+      .timer {
+        display: flex;
+        justify-content: space-between;
 
+        margin-top: 12px;
+      }
+      .field {
+      }
+      .value {
+        display: block;
+
+        margin: 0;
+
+        text-align: center;
+        font-size: 36px;
+      }
+      .label {
+        display: block;
+
+        text-transform: uppercase;
+      }
+    </style>
     <script src="js/02-timer.js" type="module"></script>
   </body>
 </html>
