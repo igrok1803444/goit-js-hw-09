@@ -72,7 +72,6 @@ function renderInterface(selectedDate) {
     ...Object.values(convertMs(compareValue))
   );
 
-  console.log(compareValue);
   daysEl.textContent = days;
   hoursEl.textContent = hours;
   minutesEl.textContent = minutes;
