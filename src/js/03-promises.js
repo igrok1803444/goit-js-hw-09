@@ -25,10 +25,14 @@ function createPromise(position, delay) {
     setTimeout(() => {
       if (shouldResolve) {
         // Fulfill
-        resolve(Notify.success(`Fulfilled promise ${position} in ${delay}ms`));
+        resolve(
+          Notify.success(`Fulfilled promise ${position + 1} in ${delay}ms`)
+        );
       } else {
         // Reject
-        reject(Notify.failure(`Rejected promise ${position} in ${delay}ms`));
+        reject(
+          Notify.failure(`Rejected promise ${position + 1} in ${delay}ms`)
+        );
       }
     }, delay);
   });
